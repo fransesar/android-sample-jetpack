@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="detail"
+            type="com.example.jetpack.data.JetpackModel" />
+        <variable
+            name="palette"
+            type="com.example.jetpack.data.JetpackPalette" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@{palette.color}"
+        tools:context=".ui.detailjetpack.DetailFragment">
+
+        <ImageView
+            android:id="@+id/jetpackImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:imageUrl="@{detail.jetpackImage}"
+            android:scaleType="fitCenter"
+            android:minHeight="200dp"/>
+
+        <TextView
+            android:id="@+id/jetpackName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/jetpackImage"
+            android:text="@{detail.jetpackName}"
+            android:layout_margin="4dp"
+            android:layout_centerHorizontal="true"
+            style="@style/Title" />
+
+        <TextView
+            android:id="@+id/jetpackPurpose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/jetpackName"
+            android:text="@{detail.jetpackFor}"
+            android:layout_margin="4dp"
+            android:layout_centerHorizontal="true"
+            style="@style/Text" />
+
+        <TextView
+            android:id="@+id/jetpackTemperament"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/jetpackPurpose"
+            android:text="@{detail.jetpackTemperament}"
+            android:layout_margin="4dp"
+            android:layout_centerHorizontal="true"
+            style="@style/Text" />
+
+        <TextView
+            android:id="@+id/jetpackLifespan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/jetpackTemperament"
+            android:text="@{detail.jetpackLifespan}"
+            android:layout_margin="4dp"
+            android:layout_centerHorizontal="true"
+            style="@style/Text" />
+
+    </RelativeLayout>
+</layout>
